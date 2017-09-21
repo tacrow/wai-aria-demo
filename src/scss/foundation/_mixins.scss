@@ -1,0 +1,53 @@
+/*
+ * foundation/_mixins.scss
+ */
+$txt-white-color: #ffffff;
+
+$txt-base-color: #333333;
+
+$link-base-color: #dfdfdf;
+
+$bg-base-color: #cccccc;
+
+@mixin bg-img($path) {
+  background-image: url("/assets/pc/img/"+$path);
+}
+
+@mixin fs-base {
+  font-size: 12px;
+}
+@mixin fs8 {
+  font-size: 8px;
+}
+@mixin fs9 {
+  font-size: 9px;
+}
+@mixin fs10 {
+  font-size: 10px;
+}
+@mixin fs11 {
+  font-size: 11px;
+}
+@mixin fs14 {
+  font-size: 14px;
+}
+@mixin fs16 {
+  font-size: 16px;
+}
+@mixin fs18 {
+  font-size: 18px;
+}
+@mixin fs20 {
+  font-size: 20px;
+}
+@mixin fs24 {
+  font-size: 24px;
+}
+
+@mixin box-shadow($color) {
+  box-shadow: 0 1px 2px $color;
+}
+
+@mixin box-shadow-base {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+}

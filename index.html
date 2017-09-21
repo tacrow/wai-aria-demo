@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="content-language" content="ja">
+        <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+        <meta http-equiv="content-style-Type" content="text/css">
+        <meta http-equiv="content-script-Type" content="text/javascript">
+        <meta name="description" content="wai-aria">
+        <meta name="keywords" content="wai-aria">
+        <title>WAI-ARIA DEMO</title>
+        <link media="all" type="text/css" rel="stylesheet" href="src/bundle/css/all.css">
+    </head>
+    <body id="l-main">
+        <h1>WAI-ARIA DEMO</h1>
+        <header class="l-header">
+            <nav　role="navigation" class="l-global-nav">
+                <ul class="c-nav-list">
+                    <li class="c-nav-list__item"><a href="">Item1</a></li>
+                    <li class="c-nav-list__item"><a href="">Item2</a></li>
+                    <li class="c-nav-list__item"><a href="">Item3</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>1. Tab UI</h2>
+            <div id="l-contents">
+                <ul class="c-tab u-cf" role="tablist">
+                    <li class="c-tab__item js-tab" role="presentation">
+                        <div class="c-tab__item__material" role="tab" tabIndex="0" aria-selected="true" aria-controls="section1" data-panel="section1">Tab1</div>
+                    </li>
+                    <li class="c-tab__item js-tab" role="presentation">
+                        <div class="c-tab__item__material" role="tab" tabIndex="-1" aria-selected="false" aria-controls="section2" data-panel="section2">Tab2</div>
+                    </li>
+                    <li class="c-tab__item js-tab" role="presentation">
+                        <div class="c-tab__item__material" role="tab" tabIndex="-1" aria-selected="false" aria-controls="section3" data-panel="section3">Tab3</div>
+                    </li>
+                </ul>
+                <section id="section1" class="c-tab-section js-panel" role="tabpanel" aria-hidden="false">
+                    <h3>Section1</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </section>
+                <section id="section2" class="c-tab-section js-panel" role="tabpanel" aria-hidden="true">
+                    <h3>Section2</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </section>
+                <section id="section3" class="c-tab-section js-panel" role="tabpanel" aria-hidden="true">
+                    <h3>Section3</h3>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                </section>
+            </div>
+        </main>
+        <footer class="l-footer">
+            <p class="u-fs12">Copyright&nbsp;&copy;&nbsp;Tacrow&nbsp;All Rights Reserved.</p>
+        </footer>
+
+        <script src="src/bundle/js/bundle.js"></script>
+    </body>
+</html>

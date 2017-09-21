@@ -1,0 +1,130 @@
+@charset "utf-8";
+/*
+ * object/utility/_typography.scss
+ */
+.u-fs8 {
+  font-size: 8px;
+}
+.u-fs9 {
+  font-size: 9px;
+}
+.u-fs10 {
+  font-size: 10px;
+}
+.u-fs11 {
+  font-size: 11px;
+}
+.u-fs12 {
+  font-size: 12px;
+}
+.u-fs14 {
+  font-size: 14px;
+}
+.u-fs15 {
+  font-size: 15px;
+}
+.u-fs16 {
+  font-size: 16px;
+}
+.u-fs18 {
+  font-size: 18px;
+}
+.u-fs20 {
+  font-size: 20px;
+}
+.u-fs25 {
+  font-size: 25px;
+}
+.u-fs30 {
+  font-size: 30px;
+}
+
+.u-underline {
+  text-decoration: underline;
+}
+
+.u-lighter {
+  font-weight: lighter;
+}
+.u-normal {
+  font-weight: normal;
+}
+.u-bold {
+  font-weight: bold;
+}
+
+.u-textleft {
+  text-align: left;
+}
+.u-textCenter {
+  text-align: center;
+}
+.u-textRight {
+  text-align: right;
+}
+
+.u-verticalTop {
+  vertical-align: top;
+}
+.u-verticalMiddle {
+  vertical-align: middle;
+}
+.u-verticalBottom {
+  vertical-align: bottom;
+}
+.u-verticalBaseline {
+  vertical-align: baseline;
+}
+.u-verticalTextBottom {
+  vertical-align: text-bottom;
+}
+
+.u-baseTextShadow {
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/*
+ * 文章の折り返し揃え
+ */
+.u-justify {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+/*
+ * 1行以上３点リーダー
+ */
+.u-onewrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.u-twowrap,
+.u-threewrap,
+.u-fourwrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+/*
+ * 2行以上３点リーダー
+ */
+.u-twowrap {
+  -webkit-line-clamp: 2;
+}
+
+/*
+ * 3行以上３点リーダー
+ */
+.u-threewrap {
+  -webkit-line-clamp: 3;
+}
+
+/*
+ * 4行以上３点リーダー
+ */
+.u-fourwrap {
+  -webkit-line-clamp: 4;
+}

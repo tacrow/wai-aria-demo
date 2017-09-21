@@ -1,0 +1,16 @@
+@charset "utf-8";
+/*
+* layout/_core.css
+*/
+#l-main {
+  width: 1040px;
+  margin: 0 auto;
+}
+
+#l-contents {
+  min-height: 300px;
+  margin-bottom: 40px;
+  padding: 40px;
+  border: 1px solid #dcdcdc;
+  box-sizing: border-box;
+}
