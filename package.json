@@ -9,8 +9,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "style": "node-sass src/scss/all.scss src/bundle/css/all.css",
-    "script": "browserify src/js/app.js -t babelify -o src/bundle/js/bundle.js",
+    "style": "node-sass src/scss/all.scss docs/bundle/css/all.css",
+    "script": "browserify src/js/app.js -t babelify -o docs/bundle/js/bundle.js",
     "watch:style": "watch 'npm run style' $npm_package_config_scss_dir ",
     "watch:script": "watch 'npm run script' $npm_package_config_js_dir",
     "watch": "npm run watch:style & npm run watch:script"

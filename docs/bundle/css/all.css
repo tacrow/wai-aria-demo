@@ -437,6 +437,14 @@ button {
   width: 120px;
   padding: 10px 0 8px; }
 
+/*
+ * object/component/_dialog.css
+ */
+.c-dialog {
+  width: 50%; }
+  .c-dialog [role="document"] {
+    outline: none; }
+
 /* Object -Project */
 /* Object - Utility */
 /*

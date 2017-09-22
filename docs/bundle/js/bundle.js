@@ -10297,18 +10297,16 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var $dialog = (0, _jquery2.default)('#js-dialog');
+var elemDialog = document.querySelector('dialog');
 var $btnDialogOpen = (0, _jquery2.default)('#js-btn-dialog-open');
 var $btnDialogClose = (0, _jquery2.default)('#js-btn-dialog-close');
 
 function dialog() {
   $btnDialogOpen.on('click', function () {
-    $dialog.show().attr({
-      'open': true
-    });
+    elemDialog.showModal();
   });
   $btnDialogClose.on('click', function () {
-    $dialog.hide();
+    elemDialog.close();
   });
 };
 

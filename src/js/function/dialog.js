@@ -2,17 +2,17 @@
 
 import $ from 'jquery'
 
-const dialog = document.querySelector('dialog')
+const elemDialog = document.querySelector('dialog')
 const $btnDialogOpen = $('#js-btn-dialog-open')
 const $btnDialogClose = $('#js-btn-dialog-close')
 
 function dialog() {
   $btnDialogOpen.on('click', () => {
-    dialog.showModal()
-  }, false)
+    elemDialog.showModal()
+  })
   $btnDialogClose.on('click', () => {
-    dialog.close()
-  }, false)
+    elemDialog.close()
+  })
 };
 
 const uiDialog = { dialog };

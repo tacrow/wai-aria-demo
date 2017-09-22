@@ -3,5 +3,8 @@
  * object/component/_dialog.css
  */
 .c-dialog {
-
+  width: 50%;
+  [role="document"] {
+    outline: none;
+  }
 }
