@@ -1,0 +1,56 @@
+@charset "utf-8";
+/*
+ * object/component/_drawer.css
+ */
+.c-drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  padding: 20px;
+  background-color: #000;
+  box-sizing: border-box;
+  color: #fff;
+  transform: translate(300px, 0);
+  will-change: transform, visibility;
+  ul {
+    padding-left: 20px;
+  }
+  &[aria-hidden="true"] {
+    visibility: hidden;
+    transition: transform 0.3s linear, visibility 0s linear 0.3s;
+  }
+  &[aria-hidden="false"] {
+    transform: translate(0, 0);
+    transition: transform 0.3s linear;
+  }
+}
+
+.c-drawer-btn {
+  position: relative;
+  width: 120px;
+  padding: 10px 0 8px;
+  text-align: center;
+  outline: none;
+}
+
+.c-drawer,
+.c-drawer-btn {
+  z-index: 9999;
+}
+
+.c-black-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-color: rgba(0,0,0,.7);
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+  &[aria-hidden="false"] {
+    visibility: visible;
+  }
+}

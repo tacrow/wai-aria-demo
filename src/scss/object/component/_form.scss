@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*
+ * object/component/_form.css
+ */
+.c-form {
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.c-input-box {
+  height: 80px;
+  position: relative;
+}
+
+.c-required {
+  margin-right: 15px;
+  padding: 5px 10px 3px;
+  background-color: red;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+}
+
+.c-input-text {
+  width: 300px;
+  padding: 10px 10px 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.c-tooltip {
+  color: red;
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+  &[aria-hidden="false"] {
+    visibility: visible;
+  }
+}
+
+.c-btn-submit {
+  width: 120px;
+  padding: 10px 0 8px;
+}

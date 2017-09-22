@@ -1,7 +1,7 @@
 @charset "utf-8";
 /*
-* object/component/_tab.css
-*/
+ * object/component/_tab.css
+ */
 .c-tab {
   height: 42px;
   border-bottom: 1px solid #ddd;
@@ -22,6 +22,7 @@
       border-radius: 5px 5px 0 0;
       text-align: center;
       line-height: 42px;
+      outline: none;
       cursor: pointer;
       opacity: .5;
       &[aria-selected="true"] {
@@ -33,7 +34,10 @@
 }
 
 .c-tab-section {
+  min-height: 176px;
   padding: 20px;
+  border: 1px solid #ddd;
+  border-top: none;
   &[aria-hidden="true"] {
     display: none;
   }

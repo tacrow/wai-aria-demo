@@ -3,13 +3,42 @@
 * object/component/_nav.css
 */
 .c-nav-list {
-  padding: 10px 20px;
   border: 1px solid #ddd;
   &__item {
+    position: relative;
     float: left;
     margin-right: 20px;
     a {
+      padding: 10px 20px;
       color: #333;
+    }
+  }
+}
+
+.c-sub-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 160px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 1;
+  /*
+   * aria属性は、UIに対して役割・状態・機能性などの付加的な意味を与える、
+   * 従って、aria属性をCSSセレクタとして利用してもよい。
+   *
+   * 状態に応じてニッチなクラス名を付与するよりも良いかもしれない。
+   */
+  &[aria-hidden="true"] {
+    display: none;
+  }
+  &[aria-hidden="false"] {
+    display: block;
+  }
+  &__item {
+    a {
+      padding: 10px 20px;
+      &:hover { text-decoration: underline; }
     }
   }
 }

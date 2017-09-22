@@ -2,7 +2,7 @@
 
 import $ from 'jquery'
 
-export default function() {
+function tab() {
   const $tab = $('.js-tab')
   const $panel = $('.js-panel')
 
@@ -19,7 +19,6 @@ export default function() {
       'aria-selected': false,
       'tabIndex': '-1'
     })
-
     $target.attr({
       'aria-selected': true,
       'tabIndex': '0'
@@ -32,3 +31,7 @@ export default function() {
     $('#'+currentPanel).attr('aria-hidden', false)
   })
 };
+
+const uiTab = { tab };
+
+export default uiTab;

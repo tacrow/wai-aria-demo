@@ -2,12 +2,19 @@
 /*
 * layout/_core.css
 */
-#l-main {
+#l-wrap {
   width: 1040px;
   margin: 0 auto;
 }
 
+#l-title {
+  padding: 20px 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 #l-contents {
+  position: relative;
   min-height: 300px;
   margin-bottom: 40px;
   padding: 40px;

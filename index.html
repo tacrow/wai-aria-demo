@@ -8,23 +8,40 @@
         <meta http-equiv="content-script-Type" content="text/javascript">
         <meta name="description" content="wai-aria">
         <meta name="keywords" content="wai-aria">
-        <title>WAI-ARIA DEMO</title>
+        <title>WAI-ARIA Demo</title>
         <link media="all" type="text/css" rel="stylesheet" href="src/bundle/css/all.css">
     </head>
-    <body id="l-main">
-        <h1>WAI-ARIA DEMO</h1>
-        <header class="l-header">
+    <body id="l-wrap">
+        <h1 id="l-title">WAI-ARIA Demo</h1>
+        <header id="l-header">
             <nav　role="navigation" class="l-global-nav">
                 <ul class="c-nav-list u-cf">
-                    <li class="c-nav-list__item"><a href="">Page1</a></li>
-                    <li class="c-nav-list__item"><a href="">Page2</a></li>
-                    <li class="c-nav-list__item"><a href="">Page3</a></li>
-                    <li class="c-nav-list__item"><a href="">Page4</a></li>
-                    <li class="c-nav-list__item"><a href="">Page5</a></li>
+                    <li class="c-nav-list__item"><a href="">1.Page1</a></li>
+                    <li class="c-nav-list__item">
+                        <a href="" class="js-sub-nav-trigger" aria-haspopup="true">2.Page2</a>
+                        <ul class="c-sub-list js-sub-nav-list" aria-label="submenu" aria-hidden="true">
+                            <li class="c-sub-list__item"><a href="">1.SubPage</a></li>
+                            <li class="c-sub-list__item"><a href="">2.SubPage</a></li>
+                            <li class="c-sub-list__item"><a href="">3.SubPage</a></li>
+                            <li class="c-sub-list__item"><a href="">4.SubPage</a></li>
+                        </ul>
+                    </li>
+                    <li class="c-nav-list__item js-nav-item">
+                        <a href="" class="js-sub-nav-trigger" aria-haspopup="true">3.Page3</a>
+                        <ul class="c-sub-list js-sub-nav-list" aria-label="submenu" aria-hidden="true">
+                            <li class="c-sub-list__item"><a href="">1.SubPage</a></li>
+                            <li class="c-sub-list__item"><a href="">2.SubPage</a></li>
+                            <li class="c-sub-list__item"><a href="">3.SubPage</a></li>
+                            <li class="c-sub-list__item"><a href="">4.SubPage</a></li>
+                            <li class="c-sub-list__item"><a href="">5.SubPage</a></li>
+                        </ul>
+                    </li>
+                    <li class="c-nav-list__item"><a href="">4.Page4</a></li>
+                    <li class="c-nav-list__item"><a href="">5.Page5</a></li>
                 </ul>
             </nav>
         </header>
-        <main>
+        <main id="l-main">
             <h2>1. Tab UI</h2>
             <div id="l-contents">
                 <ul class="c-tab u-cf" role="tablist">
@@ -40,19 +57,69 @@
                 </ul>
                 <section id="section1" class="c-tab-section js-panel" role="tabpanel" aria-hidden="false">
                     <h3>Section1</h3>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </section>
                 <section id="section2" class="c-tab-section js-panel" role="tabpanel" aria-hidden="true">
                     <h3>Section2</h3>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </section>
                 <section id="section3" class="c-tab-section js-panel" role="tabpanel" aria-hidden="true">
                     <h3>Section3</h3>
-                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                    <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
                 </section>
             </div>
+
+            <h2>2. Drawer UI</h2>
+            <div id="l-contents" class="u-oh">
+                <button id="js-btn-drawer" class="c-drawer-btn" aria-controls="navigation" aria-expanded="false">ボタン</button>
+                <div id="js-drawer" class="c-drawer" tabindex="0" role="navigation" aria-hidden="true">
+                    <h2>リスト</h2>
+                    <ul>
+                        <li>1.リンク</li>
+                        <li>2.リンク</li>
+                        <li>3.リンク</li>
+                        <li>4.リンク</li>
+                        <li>5.リンク</li>
+                    </ul>
+                </div>
+                <div id="js-black-layer" class="c-black-layer" aria-hidden="true"></div>
+            </div>
+
+            <h2>3. Form UI</h2>
+            <div id="l-contents">
+                <form class="c-form">
+                    <div class="c-input-box">
+                        <span class="c-required">必須</span>
+                        <input typr="text" id="js-username" class="c-input-text js-input-required" placeholder="Your username" aria-describedby="username-tip">
+                        <div class="c-tooltip js-tooptip" role="tooltip" aria-hidden="true">
+                            <p>Your username is your email address.</p>
+                        </div>
+                    </div>
+                    <div class="c-input-box">
+                        <span class="c-required">必須</span>
+                        <input typr="text" id="js-password" class="c-input-text js-input-required" placeholder="Your password" aria-describedby="password-tip">
+                        <div class="c-tooltip js-tooptip" role="tooltip" aria-hidden="true">
+                            <p>Was emailed to you when you signed up.</p>
+                        </div>
+                    </div>
+                    <input type="submit" id="js-btn-submit" class="c-btn-submit" value="送信">
+                </form>
+            </div>
+
+            <h2>4. Dialog UI</h2>
+            <div id="l-contents" class="u-oh">
+                <dialog id="js-dialog" class="c-dialog" aria-labelledby="d-message">
+                    <div role="document" tabindex="0">
+                        <h2>Dialog</h2>
+                        <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+                        <button id="js-btn-dialog-close" class="c-btn-dialog-close">閉じる</button>
+                    </div>
+                </dialog>
+                <button id="js-btn-dialog-open" class="c-btn-dialog-open">ボタン</button>
+                <p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
         </main>
-        <footer class="l-footer">
+        <footer id="l-footer">
             <p class="u-fs12">Copyright&nbsp;&copy;&nbsp;Tacrow&nbsp;All Rights Reserved.</p>
         </footer>
 

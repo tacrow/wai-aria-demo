@@ -1,7 +1,13 @@
 'use strict';
 
-import tab from './function/tab.js'
-import nav from './function/nav.js'
+import uiTab from './function/tab.js'
+import uiNav from './function/nav.js'
+import uiDrawer from './function/drawer.js'
+import uiForm from './function/form.js'
+import uiDialog from './function/dialog.js'
 
-tab();
-nav();
+uiTab.tab();
+uiNav.nav();
+uiDrawer.drawer();
+uiForm.form();
+uiDialog.dialog();
