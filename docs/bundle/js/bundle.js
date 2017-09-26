@@ -10297,16 +10297,28 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var elemDialog = document.querySelector('dialog');
+var $elemDialog = (0, _jquery2.default)('#js-dialog');
+var $elemLayer = (0, _jquery2.default)('#js-layer');
 var $btnDialogOpen = (0, _jquery2.default)('#js-btn-dialog-open');
 var $btnDialogClose = (0, _jquery2.default)('#js-btn-dialog-close');
 
 function dialog() {
   $btnDialogOpen.on('click', function () {
-    elemDialog.showModal();
+    $elemDialog.attr({
+      'role': 'alertdialog',
+      'tabindex': 0,
+      'aria-hidden': false,
+      'aria-labelledby': 'd-message'
+    });
+    $elemLayer.attr('aria-hidden', false);
+  });
+  $elemLayer.on('click', function () {
+    $elemDialog.removeAttr('role aria-describedby tabindex').attr('aria-hidden', true);
+    $elemLayer.attr('aria-hidden', true);
   });
   $btnDialogClose.on('click', function () {
-    elemDialog.close();
+    $elemDialog.removeAttr('role aria-describedby tabindex').attr('aria-hidden', true);
+    $elemLayer.attr('aria-hidden', true);
   });
 };
 
