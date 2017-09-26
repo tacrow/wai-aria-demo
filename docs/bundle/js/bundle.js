@@ -10276,6 +10276,10 @@ var _dialog = require('./function/dialog.js');
 
 var _dialog2 = _interopRequireDefault(_dialog);
 
+var _accordion = require('./function/accordion.js');
+
+var _accordion2 = _interopRequireDefault(_accordion);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _tab2.default.tab();
@@ -10283,8 +10287,38 @@ _nav2.default.nav();
 _drawer2.default.drawer();
 _form2.default.form();
 _dialog2.default.dialog();
+_accordion2.default.accordion();
 
-},{"./function/dialog.js":3,"./function/drawer.js":4,"./function/form.js":5,"./function/nav.js":6,"./function/tab.js":7}],3:[function(require,module,exports){
+},{"./function/accordion.js":3,"./function/dialog.js":4,"./function/drawer.js":5,"./function/form.js":6,"./function/nav.js":7,"./function/tab.js":8}],3:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jquery = require('jquery');
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function accordion() {
+  var $accordionTitle = (0, _jquery2.default)('.js-accordion-title');
+
+  $accordionTitle.on('click', function (e) {
+    var $this = (0, _jquery2.default)(e.currentTarget);
+    var state = $this.attr('aria-expanded') == 'false' ? true : false;
+
+    $this.attr('aria-expanded', state);
+    $this.next().attr('aria-hidden', !state);
+  });
+};
+
+var uiAccordion = { accordion: accordion };
+
+exports.default = uiAccordion;
+
+},{"jquery":1}],4:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10326,7 +10360,7 @@ var uiDialog = { dialog: dialog };
 
 exports.default = uiDialog;
 
-},{"jquery":1}],4:[function(require,module,exports){
+},{"jquery":1}],5:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10373,7 +10407,7 @@ var uiDrawer = { drawer: drawer };
 
 exports.default = uiDrawer;
 
-},{"jquery":1}],5:[function(require,module,exports){
+},{"jquery":1}],6:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10424,7 +10458,7 @@ var uiForm = { form: form };
 
 exports.default = uiForm;
 
-},{"jquery":1}],6:[function(require,module,exports){
+},{"jquery":1}],7:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -10465,7 +10499,7 @@ var uiNav = { nav: nav };
 
 exports.default = uiNav;
 
-},{"jquery":1}],7:[function(require,module,exports){
+},{"jquery":1}],8:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {

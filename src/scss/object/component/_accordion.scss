@@ -1,0 +1,23 @@
+@charset "utf-8";
+/*
+ * object/component/_accordion.scss
+ */
+.c-accordion-title {
+  margin-bottom: 10px;
+  padding: 10px 10px 8px;
+  background-color: #999;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  &:hover {
+    opacity: .7;
+  }
+}
+
+.c-accordion-panel {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  &[aria-hidden="true"] { display: none; }
+  &[aria-hidden="false"] { display: block; }
+}
